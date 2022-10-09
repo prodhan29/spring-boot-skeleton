@@ -1,6 +1,8 @@
 package com.nahid.simpleboot.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.ALWAYS)
 public class UserDTO {
 
     public Integer id;
@@ -8,6 +10,8 @@ public class UserDTO {
     public String name;
 
     public String username;
+
+    public boolean enabled;
 
     public Integer getId() {
         return id;
@@ -34,5 +38,13 @@ public class UserDTO {
     public UserDTO setUsername(String username) {
         this.username = username;
         return this;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }
