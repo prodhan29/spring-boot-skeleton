@@ -14,16 +14,6 @@ import org.springframework.web.client.HttpClientErrorException;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-//    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
-
-    @ResponseStatus(value = HttpStatus.UNAUTHORIZED)
-    @ResponseBody
-    @ExceptionHandler(HttpClientErrorException.Unauthorized.class)
-    public ErrorResponse unauthorized(HttpClientErrorException.Unauthorized unauthorizedException) {
-//        logger.error(unauthorizedException.getMessage());
-        return new ErrorResponse(HttpStatus.UNAUTHORIZED.value(), unauthorizedException.getMessage());
-    }
-
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     @ResponseBody
     @ExceptionHandler(NullPointerException.class)
