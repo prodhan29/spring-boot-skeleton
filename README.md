@@ -6,7 +6,7 @@ A simple spring boot skeleton to get going with less hassle.
 RabbitMQ is a message broker. A message broker is software that enables applications, systems, and services to communicate with each other and exchange information. The message broker does this by translating messages between formal messaging protocols. This allows interdependent services to “talk” with one another directly, even if they were written in different languages or implemented on different platforms.
 [source](https://www.ibm.com/cloud/learn/message-brokers)
 
-[rabbitmq-image](https://user-images.githubusercontent.com/16105008/205456042-31426647-8c1a-49e1-a9b5-ef9709e4e68c.png)
+![rabbitmq-image](https://user-images.githubusercontent.com/16105008/205456042-31426647-8c1a-49e1-a9b5-ef9709e4e68c.png)
 
 ### 5 Types of Exchange
 
