@@ -6,6 +6,8 @@ A simple spring boot skeleton to get going with less hassle.
 RabbitMQ is a message broker. A message broker is software that enables applications, systems, and services to communicate with each other and exchange information. The message broker does this by translating messages between formal messaging protocols. This allows interdependent services to “talk” with one another directly, even if they were written in different languages or implemented on different platforms.
 [source](https://www.ibm.com/cloud/learn/message-brokers)
 
+[rabbitmq-image](https://user-images.githubusercontent.com/16105008/205456042-31426647-8c1a-49e1-a9b5-ef9709e4e68c.png)
+
 ### 5 Types of Exchange
 
 * Direct: The  producer will create the message with routing key. so with direct exchange the routing key is being compared to the binding key, if its an exact match then message will move through the system.
@@ -90,6 +92,14 @@ public class Producer {
         rabbitTemplate.convertAndSend(RabbitMQConfig.exchange, RabbitMQConfig.BINDING_KEY, message);
     }
 }
+```
+* As we are using spring boot framework, it will add these below properties for us. if we want to modify any of these properties we can add them in application-properties files.
+```
+#RabbitMQ settings
+rabbitmq.host=localhost
+rabbitmq.port=15672
+rabbitmq.username=guest
+rabbitmq.password=guest
 ```
 
 ## License
