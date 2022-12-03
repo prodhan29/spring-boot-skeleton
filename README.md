@@ -8,6 +8,15 @@ RabbitMQ is a message broker. A message broker is software that enables applicat
 
 ![rabbitmq-image](https://user-images.githubusercontent.com/16105008/205456042-31426647-8c1a-49e1-a9b5-ef9709e4e68c.png)
 
+### Installation
+
+* if we have docker installed in our machine. we can simply pull down the rabbitmq image from docker-hub and also can run it in no time.
+```
+docker run --rm -it --hostname my-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+```
+
+* if you don't have docker you can choose the hard way. [source](https://www.cherryservers.com/blog/how-to-install-and-start-using-rabbitmq-on-ubuntu-22-04)
+
 ### 5 Types of Exchange
 
 * Direct: The  producer will create the message with routing key. so with direct exchange the routing key is being compared to the binding key, if its an exact match then message will move through the system.
